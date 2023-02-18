@@ -166,6 +166,7 @@
                 punteggio2 = punteggio2 + 1;
 
             }
+        }   
 
             for(let i = 0; i < celle.length; i++){
                 let link = celle[i];
@@ -178,13 +179,22 @@
                     if(!cellsOccupied && partitaFinita === false){
                         if(currentPlayer % 2 == 0){
                             e.currentTarget.classList.toggle(player2);
-                            e.currentTarget.classList.toggle(player1)
+                        }else{
+                                e.currentTarget.classList.toggle(player1);
+                            }
+                            currentPlayer++;
+                            celleOccupate = celleOccupate + 1;
+                            if(celleOccupate == 9){
+                                result_display.innerHTML = "pareggio";
+                            }
+                            checkVictory();
                         }
-                    }
-                }
+
+                })
             }
             
-        }
+            
+        
 
     </script>
 </body>
