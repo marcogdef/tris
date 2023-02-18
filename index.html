@@ -46,7 +46,144 @@
                 punteggio2 = punteggio2 + 1;
 
             }
-            ddwdw
+            else if(
+                celle[0].classList.contains(player1) &&
+                celle[1].classList.contains(player1) &&
+                celle[2].classList.contains(player1) 
+            ) {
+                console.log("Vince player 1");
+                partitaFinita = true;
+                currentPlayer = 1;
+                punteggio1 = punteggio1 + 1;
+            } else if (
+                celle[0].classList.contains(player1) &&
+                celle[1].classList.contains(player2) &&
+                celle[2].classList.contains(player2)
+            ) {
+                console.log("Vince player 2");
+                partitaFinita = true;
+                currentPlayer = 2;
+                punteggio2 = punteggio2 + 1;
+
+            }
+            else if(
+                celle[0].classList.contains(player1) &&
+                celle[1].classList.contains(player1) &&
+                celle[2].classList.contains(player1) 
+            ) {
+                console.log("Vince player 1");
+                partitaFinita = true;
+                currentPlayer = 1;
+                punteggio1 = punteggio1 + 1;
+            } else if (
+                celle[0].classList.contains(player1) &&
+                celle[1].classList.contains(player2) &&
+                celle[2].classList.contains(player2)
+            ) {
+                console.log("Vince player 2");
+                partitaFinita = true;
+                currentPlayer = 2;
+                punteggio2 = punteggio2 + 1;
+
+            }
+            else if(
+                celle[0].classList.contains(player1) &&
+                celle[1].classList.contains(player1) &&
+                celle[2].classList.contains(player1) 
+            ) {
+                console.log("Vince player 1");
+                partitaFinita = true;
+                currentPlayer = 1;
+                punteggio1 = punteggio1 + 1;
+            } else if (
+                celle[0].classList.contains(player1) &&
+                celle[1].classList.contains(player2) &&
+                celle[2].classList.contains(player2)
+            ) {
+                console.log("Vince player 2");
+                partitaFinita = true;
+                currentPlayer = 2;
+                punteggio2 = punteggio2 + 1;
+
+            }
+            else if(
+                celle[0].classList.contains(player1) &&
+                celle[1].classList.contains(player1) &&
+                celle[2].classList.contains(player1) 
+            ) {
+                console.log("Vince player 1");
+                partitaFinita = true;
+                currentPlayer = 1;
+                punteggio1 = punteggio1 + 1;
+            } else if (
+                celle[0].classList.contains(player1) &&
+                celle[1].classList.contains(player2) &&
+                celle[2].classList.contains(player2)
+            ) {
+                console.log("Vince player 2");
+                partitaFinita = true;
+                currentPlayer = 2;
+                punteggio2 = punteggio2 + 1;
+
+            }
+            else if(
+                celle[0].classList.contains(player1) &&
+                celle[1].classList.contains(player1) &&
+                celle[2].classList.contains(player1) 
+            ) {
+                console.log("Vince player 1");
+                partitaFinita = true;
+                currentPlayer = 1;
+                punteggio1 = punteggio1 + 1;
+            } else if (
+                celle[0].classList.contains(player1) &&
+                celle[1].classList.contains(player2) &&
+                celle[2].classList.contains(player2)
+            ) {
+                console.log("Vince player 2");
+                partitaFinita = true;
+                currentPlayer = 2;
+                punteggio2 = punteggio2 + 1;
+
+            }
+            else if(
+                celle[0].classList.contains(player1) &&
+                celle[1].classList.contains(player1) &&
+                celle[2].classList.contains(player1) 
+            ) {
+                console.log("Vince player 1");
+                partitaFinita = true;
+                currentPlayer = 1;
+                punteggio1 = punteggio1 + 1;
+            } else if (
+                celle[0].classList.contains(player1) &&
+                celle[1].classList.contains(player2) &&
+                celle[2].classList.contains(player2)
+            ) {
+                console.log("Vince player 2");
+                partitaFinita = true;
+                currentPlayer = 2;
+                punteggio2 = punteggio2 + 1;
+
+            }
+
+            for(let i = 0; i < celle.length; i++){
+                let link = celle[i];
+                link.addEventListener("click", function(e) {
+                    e.preventDefault();
+                    cellsOccupied = 
+                        e.currentTarget.classList.contains(player1) || 
+                        e.currentTarget.classList.contains(player2);
+                    console.log(cellsOccupied);
+                    if(!cellsOccupied && partitaFinita === false){
+                        if(currentPlayer % 2 == 0){
+                            e.currentTarget.classList.toggle(player2);
+                            e.currentTarget.classList.toggle(player1)
+                        }
+                    }
+                }
+            }
+            
         }
 
     </script>
