@@ -189,9 +189,46 @@
                             }
                             checkVictory();
                         }
+                        if (partitaFinita === true){
+                            result_display.innerHTML = "Vince" + currentPlayer;
 
-                })
-            }
+                        }
+                    })
+                }
+                function reset(){
+                    for(let i = 0; i < celle-length; i++){
+                        celle[i].classList.remove(player1);
+                         celle[i].classList.remove(player2);
+                    }
+                        result_display.innerHTML = "";
+                        partitaFinita = false;
+                        celleOccupate = 0;
+                }
+
+                let grid =  [
+                [null, null, null],
+                [null, null, null],
+                [null, null, null],
+                ];
+
+                function pCelleVuote(b){
+                    let pCelleVuote = [];
+                    for (let i = 0; i <b.length; i++){
+                        if (b[i][j] === null){
+                            pCelleVuote.push([i,j]);
+                        }
+                    }
+                }
+
+                return pCelleVuote;
+
+                function prendiCelle(b,player){
+                    let celleVuote = pCelleVuote(b);
+                    let randomCell = celleVuote[Math.floor(Math.random() * celleVuote.length)];
+                    b[randomCell[0]][randomCell[1]] = player;
+                    return b;
+                }
+
             
             
         
